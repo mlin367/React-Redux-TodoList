@@ -1,9 +1,11 @@
 import React from 'react';
 
 const TodoList = props => (
-  <div>
+  <ul>
     {props.todos.map((todo, i) => (
       <Todo todo={todo} key={i} />
     ))}
-  </div>
+  </ul>
 );
+
+export default TodoList;
