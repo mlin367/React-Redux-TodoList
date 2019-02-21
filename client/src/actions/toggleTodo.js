@@ -1,6 +1,6 @@
 const toggleTodo = id => {
   return {
-    type: 'TOGGLE_ID',
+    type: 'TOGGLE_TODO',
     id
   }
 }

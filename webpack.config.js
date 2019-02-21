@@ -5,7 +5,7 @@ module.exports = {
   entry: path.resolve(__dirname, './client/src/'),
   output: {
     path: path.resolve(__dirname, './client/dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -14,12 +14,12 @@ module.exports = {
         test: /\.js[x]?/,
         exclude: /node_modules/,
         options: {
-          presets: ['react', 'env'],
-        },
-      },
-    ],
+          presets: ['react', 'env', 'es2015', 'stage-2'],
+        }
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
 };

@@ -1,7 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import toggleTodo from '../actions/toggleTodo';
+
+const mapDispatchToProps = {
+  toggle: toggleTodo
+};
 
 const Todo = props => (
-  <li>{props.todo}</li>
+  <li
+    style={props.todo.completed ? { 'textDecoration': 'line-through' } : {'textDecoration': 'none'}}
+    onClick={() => props.toggle(props.todo.id)}
+  >
+    {props.todo.content}
+  </li>
 );
 
-export default Todo;
+const TodoContainer = connect(
+  null,
+  mapDispatchToProps
+)(Todo);
+
+export default TodoContainer;

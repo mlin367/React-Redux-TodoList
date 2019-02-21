@@ -1,10 +1,12 @@
 import React from 'react';
-import AddTodo from './AddTodo';
+import AddTodoContainer from './AddTodo';
+import TodoListContainer from './TodoList';
 
 const App = props => (
   <div className="App">
     <h1>Todo List</h1>
-    <AddTodo />
+    <AddTodoContainer />
+    <TodoListContainer />
   </div>
 );
 

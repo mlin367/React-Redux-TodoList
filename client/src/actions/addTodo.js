@@ -4,7 +4,7 @@ const addTodo = content => {
   return {
     type: 'ADD_TODO',
     payload: content,
-    id: ++nextId,
+    id: nextId++,
     completed: false
   };
 };

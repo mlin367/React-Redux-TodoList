@@ -1,5 +1,5 @@
 
-const rootReducer = (state = [], action) => {
+const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -19,4 +19,4 @@ const rootReducer = (state = [], action) => {
   }
 };
 
-export default rootReducer;
+export default todos;
